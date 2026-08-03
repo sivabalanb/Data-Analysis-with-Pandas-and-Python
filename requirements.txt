@@ -1,0 +1,7 @@
+pandas>=2.2,<4
+numpy>=1.26
+matplotlib>=3.8
+seaborn>=0.13
+plotly>=5.18
+openpyxl>=3.1
+jupyterlab>=4.0

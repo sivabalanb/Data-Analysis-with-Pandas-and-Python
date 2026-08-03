@@ -1,0 +1,42 @@
+name: Suggest an improvement
+description: Suggest a new topic, exercise, or improvement
+title: "[Suggestion]: "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping make this a better learning resource!
+  - type: dropdown
+    id: kind
+    attributes:
+      label: What kind of improvement?
+      options:
+        - New topic / notebook
+        - New exercise or challenge
+        - Better explanation of existing content
+        - New dataset
+        - Documentation / README
+        - Something else
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Describe your suggestion
+      description: What problem does it solve for learners? Where would it fit?
+      placeholder: "I found that ... is not covered. A notebook about ... would help because ..."
+    validations:
+      required: true
+  - type: textarea
+    id: example
+    attributes:
+      label: Example (optional)
+      description: Sketch of code, dataset, or outline
+      render: python
+  - type: checkboxes
+    id: selfserve
+    attributes:
+      label: Would you like to contribute it?
+      options:
+        - label: Yes, I'd like to open a PR for this

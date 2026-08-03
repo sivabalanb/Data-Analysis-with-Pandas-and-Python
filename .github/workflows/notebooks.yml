@@ -1,0 +1,28 @@
+name: notebooks
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+
+jobs:
+  run-notebooks:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ["3.10", "3.12"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Install dependencies
+        run: |
+          pip install --upgrade pip
+          pip install -r requirements.txt
+          pip install nbclient nbformat ipykernel
+      - name: Install kernel
+        run: python -m ipykernel install --user --name python3
+      - name: Execute all notebooks
+        run: python scripts/test_notebooks.py

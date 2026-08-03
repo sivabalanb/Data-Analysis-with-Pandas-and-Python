@@ -1,0 +1,55 @@
+name: Notebook error
+description: A notebook fails or produces an error
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting! Please include everything below so we can reproduce it.
+  - type: dropdown
+    id: notebook
+    attributes:
+      label: Notebook
+      description: Which notebook has the problem?
+      options:
+        - 00_introduction.ipynb
+        - 01_series.ipynb
+        - 02_dataframes_1.ipynb
+        - 03_dataframes_2.ipynb
+        - 04_dataframes_3.ipynb
+        - 05_merge_join_concat.ipynb
+        - 06_groupby.ipynb
+        - 07_multindex.ipynb
+        - 08_date_time.ipynb
+        - 09_text_data.ipynb
+        - 10_visualization.ipynb
+        - 11_input_output.ipynb
+        - 12_read_csv.ipynb
+        - 13_options_settings.ipynb
+        - 14_project_chicago_salaries.ipynb
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: pandas version
+      description: Run `pd.__version__` and paste the result
+      placeholder: "e.g. 3.0.3"
+    validations:
+      required: true
+  - type: textarea
+    id: where
+    attributes:
+      label: Where does it fail?
+      description: Which cell / section? Paste the full error traceback.
+      placeholder: "Cell [12] ... \n```\n<traceback>\n```"
+    validations:
+      required: true
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Before submitting
+      options:
+        - label: I ran **Kernel → Restart & Run All** and the error reproduces
+        - label: I searched existing issues for the same problem

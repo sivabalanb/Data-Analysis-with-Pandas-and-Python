@@ -1,85 +1,146 @@
+# Data Analysis with Pandas and Python
+
 <div align="center">
-  <img src="https://github.com/awesomecoder123/Data-Analysis-with-Pandas-and-Python/blob/main/assets/pandas-python.png" alt="Data Analysis with Pandas and Python" width="400px">
+
+[![Notebooks](https://img.shields.io/badge/CI-notebooks-green)](https://github.com/sivabalanb/Data-Analysis-with-Pandas-and-Python/actions)
+[![Python](https://img.shields.io/badge/Python-3.10%2B-blue)](https://www.python.org/)
+[![Pandas](https://img.shields.io/badge/Pandas-2.2%2B-orange)](https://pandas.pydata.org/)
+[![License](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](./CONTRIBUTING.md)
+
+**A practical, hands-on introduction to data analysis with Pandas — every
+notebook runs, every notebook explains itself, and every dataset is included.**
+
+[Run instantly on Colab](#run-instantly) · [View notebooks](#notebooks) · [Install](#installation)
+
 </div>
 
-<h1 align="left">🐼 Data Analysis with Pandas and Python</h1>
+> Like this repo? ⭐ **Star it** so others can find it, and **fork it** to work
+> through the exercises yourself. Contributions are welcome — see
+> [Contributing](#contributing).
 
-<p align="left">
-  Welcome to the repository for the **Data Analysis with Pandas and Python** course on Udemy by Boris Paskhaver. 🎓
-</p>
+## Why this repository
 
-<p align="left">
-  <img src="https://img.shields.io/badge/Language-Python-blue?style=for-the-badge" alt="Language: Python">
-  <img src="https://img.shields.io/badge/Library-Pandas-orange?style=for-the-badge" alt="Library: Pandas">
-</p>
+- **Learn by doing.** Every topic maps to a runnable notebook — execute it
+  locally, on [Colab](#run-instantly), or on [Kaggle](https://www.kaggle.com/).
+- **Modern Pandas.** Code targets current Pandas (2.x/3.x). Deprecated APIs
+  (`squeeze`, `sheetname`, `pandas.Panel`) are deliberately avoided, and
+  every notebook is verified by CI on every push.
+- **Explained, not just code.** Each notebook contains narrative explanations,
+  not bare code cells — the *why* matters as much as the *how*.
+- **Reproducible.** Data files ship with the notebooks, `requirements.txt`
+  pins the dependencies, and a CI test runner executes every notebook.
+- **Real projects.** Includes an end-to-end analysis project on a real public
+  dataset, not just toy examples.
 
-<p align="left">
-  This repository serves as a comprehensive resource for learning and applying the fundamentals of data analysis using the powerful Pandas library in Python. It contains well-documented code examples, Jupyter Notebooks, and real-world datasets that are covered in the course. 💡📊
-</p>
+## Run instantly
 
-<p align="left">
-  Feel free to explore the code, review the notebooks, and experiment with the provided materials. Engage with the course community, start the repository, and fork it as you see fit. 🚀🔍
-</p>
+Zero setup. Click a notebook and it opens in your browser:
 
-<p align="left">
-  Let's embark on this data-driven adventure together and unleash the power of Python and Pandas for insightful data analysis! 🚀✨
-</p>
+| | Open in Colab | Open in Binder |
+|---|---|---|
+| 01 Series | [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/sivabalanb/Data-Analysis-with-Pandas-and-Python/blob/master/01_series.ipynb) | [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/sivabalanb/Data-Analysis-with-Pandas-and-Python/HEAD?labpath=01_series.ipynb) |
+| 02 DataFrames 1 | [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/sivabalanb/Data-Analysis-with-Pandas-and-Python/blob/master/02_dataframes_1.ipynb) | [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/sivabalanb/Data-Analysis-with-Pandas-and-Python/HEAD?labpath=02_dataframes_1.ipynb) |
+| 03 DataFrames 2 | [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/sivabalanb/Data-Analysis-with-Pandas-and-Python/blob/master/03_dataframes_2.ipynb) | [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/sivabalanb/Data-Analysis-with-Pandas-and-Python/HEAD?labpath=03_dataframes_2.ipynb) |
+| 04 DataFrames 3 | [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/sivabalanb/Data-Analysis-with-Pandas-and-Python/blob/master/04_dataframes_3.ipynb) | [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/sivabalanb/Data-Analysis-with-Pandas-and-Python/HEAD?labpath=04_dataframes_3.ipynb) |
+| 05 Merge & Join | [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/sivabalanb/Data-Analysis-with-Pandas-and-Python/blob/master/05_merge_join_concat.ipynb) | [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/sivabalanb/Data-Analysis-with-Pandas-and-Python/HEAD?labpath=05_merge_join_concat.ipynb) |
+| 06 GroupBy | [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/sivabalanb/Data-Analysis-with-Pandas-and-Python/blob/master/06_groupby.ipynb) | [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/sivabalanb/Data-Analysis-with-Pandas-and-Python/HEAD?labpath=06_groupby.ipynb) |
+| 07 MultiIndex | [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/sivabalanb/Data-Analysis-with-Pandas-and-Python/blob/master/07_multindex.ipynb) | [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/sivabalanb/Data-Analysis-with-Pandas-and-Python/HEAD?labpath=07_multindex.ipynb) |
+| 08 Date & Time | [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/sivabalanb/Data-Analysis-with-Pandas-and-Python/blob/master/08_date_time.ipynb) | [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/sivabalanb/Data-Analysis-with-Pandas-and-Python/HEAD?labpath=08_date_time.ipynb) |
+| 09 Text Data | [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/sivabalanb/Data-Analysis-with-Pandas-and-Python/blob/master/09_text_data.ipynb) | [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/sivabalanb/Data-Analysis-with-Pandas-and-Python/HEAD?labpath=09_text_data.ipynb) |
+| 10 Visualization | [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/sivabalanb/Data-Analysis-with-Pandas-and-Python/blob/master/10_visualization.ipynb) | [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/sivabalanb/Data-Analysis-with-Pandas-and-Python/HEAD?labpath=10_visualization.ipynb) |
+| 11 Input & Output | [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/sivabalanb/Data-Analysis-with-Pandas-and-Python/blob/master/11_input_output.ipynb) | [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/sivabalanb/Data-Analysis-with-Pandas-and-Python/HEAD?labpath=11_input_output.ipynb) |
+| 12 Read CSV | [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/sivabalanb/Data-Analysis-with-Pandas-and-Python/blob/master/12_read_csv.ipynb) | [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/sivabalanb/Data-Analysis-with-Pandas-and-Python/HEAD?labpath=12_read_csv.ipynb) |
+| 13 Options | [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/sivabalanb/Data-Analysis-with-Pandas-and-Python/blob/master/13_options_settings.ipynb) | [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/sivabalanb/Data-Analysis-with-Pandas-and-Python/HEAD?labpath=13_options_settings.ipynb) |
+| 14 Project | [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/sivabalanb/Data-Analysis-with-Pandas-and-Python/blob/master/14_project_chicago_salaries.ipynb) | [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/sivabalanb/Data-Analysis-with-Pandas-and-Python/HEAD?labpath=14_project_chicago_salaries.ipynb) |
 
-<p align="left">
-  Good luck on your journey to learn Data Analysis with Pandas and Python! May you gain valuable insights and excel in your data-driven endeavors. 🎉🔥
-</p>
+## Table of contents
 
-## Table of Contents
+1. [Installation](#installation)
+2. [Get started](#get-started)
+3. [Notebooks](#notebooks)
+4. [Contributing](#contributing)
+5. [Contributors](#contributors)
+6. [License](#license)
 
-- [Installation](#installation)
-- [Usage](#usage)
-- [Contributing](#contributing)
-- [License](#license)
+## Installation
 
-### Installation
+You need **Python 3.10+**.
 
-To use the projects in this repository, you need to have Python and the Pandas library installed on your machine. You can install Python from the [official Python website](https://www.python.org) and Pandas using pip, the Python package installer.
+We recommend a virtual environment to keep dependencies isolated:
 
-
+```bash
+python -m venv .venv
+source .venv/bin/activate        # Windows: .venv\Scripts\activate
+pip install -r requirements.txt
 ```
-pip install pandas
-```
-It is recommended to use a virtual environment to keep the project dependencies isolated. You can create a virtual environment using venv or conda, depending on your preference.
-#### Usage
 
-Each project in this repository is located in its own Jupyter Notebook file (.ipynb). To use a specific project, open the notebook in Jupyter Notebook or JupyterLab.
+This installs Pandas, NumPy, Matplotlib, Seaborn, Plotly, and openpyxl.
 
-To run the code in the notebook, make sure you have the necessary dependencies installed. You can install the required dependencies by running the following command:
+## Get started
 
+Launch Jupyter from the repository root:
 
-
-After installing the dependencies, launch Jupyter Notebook or JupyterLab from the terminal:
-
-```
-jupyter notebook
-```
-or
-
-```
+```bash
 jupyter lab
 ```
-In your web browser, navigate to the URL provided by Jupyter Notebook/Lab and open the desired notebook (.ipynb) file. Execute the cells in the notebook to see the code and its outputs.
 
-Feel free to modify the code cells and adapt them to your specific needs. Each project contains comments and documentation to help you understand the code and its purpose.
-#### Contributing
+Then open the notebooks in the order listed below. The
+[`00_introduction.ipynb`](./00_introduction.ipynb) notebook explains how to
+navigate the repository and how the notebooks are organized.
 
-🎉 Contributions to this repository are welcome! If you have a project or improvement to suggest, please follow these steps:
+## Notebooks
 
-1. 🍴 Fork the repository.
-2. 🔧 Create a new branch for your feature or bug fix.
-3. 🚀 Implement your changes.
-4. ✔️ Test your changes to ensure they work correctly.
-5. 💾 Commit your changes and push them to your forked repository.
-6. 📩 Submit a pull request detailing your changes.
+Core path (follow in order):
 
-Please make sure to follow the repository's code style and include appropriate documentation for your changes.
+| # | Notebook | Topic |
+|---|----------|-------|
+| 1 | `01_series.ipynb` | The Series type — creation, attributes, methods |
+| 2 | `02_dataframes_1.ipynb` | DataFrames: structure, selection, dtypes |
+| 3 | `03_dataframes_2.ipynb` | DataFrames: sorting, ranking, filtering |
+| 4 | `04_dataframes_3.ipynb` | `loc`/`iloc` indexing, missing data |
+| 5 | `05_merge_join_concat.ipynb` | Combining datasets |
+| 6 | `06_groupby.ipynb` | Split-apply-combine, aggregation |
+| 7 | `07_multindex.ipynb` | MultiIndex, pivot, unstack |
+| 8 | `08_date_time.ipynb` | Working with dates and times |
+| 9 | `09_text_data.ipynb` | String methods and cleaning |
+| 10 | `10_visualization.ipynb` | Plotting with Matplotlib |
+| 11 | `11_input_output.ipynb` | Reading/writing CSV and Excel |
+| 12 | `12_read_csv.ipynb` | Reading CSVs in detail |
+| 13 | `13_options_settings.ipynb` | Display and global options |
+| 14 | `14_project_chicago_salaries.ipynb` | End-to-end analysis project (real public data) |
 
-#### License
+## Contributing
 
-📄 The code in this repository is available under the MIT License. You are free to use, modify, and distribute it for personal or commercial purposes. Please refer to the [LICENSE](./LICENSE) file for more information.
+Improvements, bug fixes, and extra exercises are welcome. Please read
+[CONTRIBUTING.md](./CONTRIBUTING.md) first — it covers setup, keeping git diffs
+clean (recommended `nbstripout`), and the PR checklist.
 
+Short version:
+
+1. Fork the repository.
+2. Make your change and keep code on modern Pandas APIs.
+3. Clear notebook outputs before committing.
+4. Verify with `python scripts/test_notebooks.py`.
+5. Open a pull request using the [PR template](./.github/pull_request_template.md).
+
+Please also read [NOTICE.md](./NOTICE.md) — it explains which material is
+covered by the repository license.
+
+## Contributors
+
+Thanks to everyone who has helped improve this repository.
+
+<!--
+To add yourself: open a pull request that appends your GitHub handle below,
+keeping the list alphabetical. That's it — no scripts, no maintainer approval
+beyond a normal review.
+-->
+- [sivabalanb](https://github.com/sivabalanb) — author & maintainer
+
+## License
+
+Original code in this repository is released under the
+[MIT License](./LICENSE). Examples and datasets derived from third-party
+sources are not covered by that license — see
+[NOTICE.md](./NOTICE.md) for details.

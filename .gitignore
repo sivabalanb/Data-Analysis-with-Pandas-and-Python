@@ -1,0 +1,17 @@
+# Jupyter / IPython
+.ipynb_checkpoints/
+*_checkpoint.ipynb
+.ipython/
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+env/
+
+# Notebook exports / scratch
+test_Export.csv
+scratch/
+*.tmp
